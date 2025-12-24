@@ -1,0 +1,235 @@
+.myPage-wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.myPage-wrap .inner .title-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.myPage-wrap .inner .title-wrap h2 {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--text-black);
+}
+
+.myPage-wrap .inner .mypage-top {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.myPage-wrap .inner .mypage-top .user-level-wrap {
+  width: 450px;
+  height: 180px;
+  background: var(--main-navy);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap {
+  width: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap {
+  display: flex;
+  padding: 16px 0;
+  gap: 12px;
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap li {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border1);
+  padding-bottom: 8px;
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap li::after {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap li.payment::after {
+  content: '입금확인중';
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap li.confirmed::after {
+  content: '입금확인';
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap li.processing::after {
+  content: '주문처리완료';
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap li.shipping::after {
+  content: '배송중';
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap li.delivered::after {
+  content: '배송완료';
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .dashboard-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .dashboard-wrap li {
+  color: var(--main-pink);
+  padding-right: 10px;
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .dashboard-wrap li::before {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  margin-right: 8px;
+  padding-left: 10px;
+  border-left: 1px solid var(--border2);
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .dashboard-wrap li.coupons::before {
+  content: 'coupon';
+  border: none;
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .dashboard-wrap li.mileage::before {
+  content: 'Mileage';
+}
+
+.myPage-wrap .inner .mypage-top .shopping-info-wrap .dashboard-wrap li.posts::before {
+  content: 'Post';
+}
+
+.myPage-wrap .inner .mypage-bottom {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.myPage-wrap .inner .mypage-bottom .user-dashboard-wrap {
+  display: flex;
+  gap: 12px;
+}
+
+.myPage-wrap .inner .mypage-bottom .user-dashboard-wrap li {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 8px;
+  background: var(--main-blue);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.myPage-wrap .inner .mypage-bottom .user-dashboard-wrap li p {
+  color: #fff;
+}
+
+.myPage-wrap .inner .mypage-bottom .user-dashboard-wrap li .top :first-child {
+  margin-bottom: 8px;
+}
+
+.myPage-wrap .inner .mypage-bottom .user-dashboard-wrap li .bottom {
+  text-align: end;
+}
+
+/* ----------------------------반응형----------------------------*/
+
+@media (max-width: 750px) {
+  .myPage-wrap .inner .mypage-bottom {
+    margin-top: 50px;
+  }
+
+  .myPage-wrap .inner .mypage-bottom .user-dashboard-wrap {
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 20px;
+  }
+
+  .myPage-wrap .inner .mypage-bottom .user-dashboard-wrap li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .myPage-wrap .inner .mypage-bottom .user-dashboard-wrap li .bottom {
+    display: none;
+  }
+
+  .myPage-wrap .inner .mypage-bottom .user-dashboard-wrap li .top {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .myPage-wrap .inner .mypage-bottom .user-dashboard-wrap li .top :first-child {
+    margin-bottom: 0;
+  }
+
+  .myPage-wrap .inner .title-wrap {
+    margin-top: 50px;
+  }
+
+  .myPage-wrap .inner .mypage-top {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .myPage-wrap .inner .mypage-top .user-level-wrap {
+    width: 300px;
+    background: none;
+    align-items: center;
+    gap: 12px;
+    color: var(--main-navy);
+  }
+
+  .myPage-wrap .inner .mypage-top .shopping-info-wrap {
+    padding: 0;
+    max-width: 400px;
+  }
+
+  .myPage-wrap .inner .mypage-bottom .user-dashboard-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .myPage-wrap .inner .mypage-top .shopping-info-wrap {
+    width: 300px;
+  }
+
+  .myPage-wrap .inner .mypage-top .shopping-info-wrap .dashboard-wrap li {
+    padding-right: 5px;
+  }
+
+  .myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap {
+    gap: 0;
+  }
+
+  .myPage-wrap .inner .mypage-top .shopping-info-wrap .order-list-wrap li {
+    width: 20%;
+    border-bottom: none;
+  }
+}

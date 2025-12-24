@@ -1,0 +1,439 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form-title {
+  font-weight: var(--fw-regular);
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row:nth-child(9) {
+  justify-content: start;
+}
+
+.form-row .form-label {
+  display: block;
+  font-weight: var(--fw-bold);
+  color: var(--text-black);
+  margin-bottom: 0.5rem;
+  min-width: 120px;
+}
+
+.form-row .form-label .required {
+  color: var(--main-pink);
+  margin-left: 0.2px;
+}
+
+.input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-wrapper .form-input {
+  width: calc(100% - 10rem);
+  padding: 1.6rem 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  /* background-color: var(--bg); */
+  color: var(--text-black);
+  transition: all 0.2s;
+}
+
+.input-wrapper .form-input:focus {
+  outline: none;
+  border-color: var(--main-blue);
+  box-shadow: 0 0 0 3px rgba(52, 94, 140, 0.1);
+}
+
+.input-wrapper .form-input:focus::placeholder {
+  color: transparent;
+}
+
+.checkIdBtn,
+.checkEmailBtn,
+.btnAuth {
+  padding: 0.875rem 1.5rem;
+  border: 1px solid var(--border3);
+  border-radius: var(--border-radius);
+  background-color: var(--text-white);
+  color: var(--border2);
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 100px;
+  height: -webkit-fill-available;
+}
+
+.checkIdBtn:hover,
+.checkEmailBtn:hover,
+.btnAuth:hover {
+  background-color: var(--bg);
+}
+
+.addressAtn {
+  width: calc(100% - 28.5rem);
+  height: 5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--main-blue);
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.addressAtn:hover {
+  background: var(--text-black);
+}
+
+/* 이메일 */
+.email-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.email-inputs .email-local {
+  flex: 1;
+}
+
+.email-inputs .email-at {
+  color: var(--text-gray);
+}
+
+.email-inputs .email-domain {
+  flex: 1;
+}
+
+.sort-list.active {
+  display: block;
+}
+
+/* 연락처 */
+.phone-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-inputs .form-select,
+.phone-inputs .form-input {
+  flex: 1;
+}
+
+/* 성별 */
+.radio-group {
+  width: calc(100% - 11rem);
+  display: flex;
+  justify-content: left;
+  gap: 2.4rem;
+}
+
+.radio-group .radio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.radio-group .radio-input {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0;
+}
+
+.radio-group .radio-label {
+  color: var(--text-black);
+  cursor: pointer;
+  margin: 0;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.date-inputs .form-select {
+  flex: 1;
+}
+
+.birthWrap {
+  width: calc(100% - 10rem);
+}
+
+.birthWrap .Sort.dropHeader {
+  flex-grow: 1;
+}
+
+/* .birthWrap .Sort.dropHeader .dropBox {
+  width: 100%;
+} */
+
+.birthYear,
+.birthMonth,
+.birthDay {
+  width: 100%;
+}
+
+.validation-message {
+  display: none;
+  margin-top: 0.5rem;
+  width: 40rem;
+  margin-bottom: 16px;
+  margin-left: 20rem;
+}
+
+.validation-error {
+  color: var(--main-pink);
+}
+
+.validation-success {
+  color: var(--sub-blue);
+}
+
+.dropBox {
+  width: 15rem !important;
+}
+/* 이용약관동의 */
+.agreement-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--text-beige);
+  background-color: var(--border3);
+}
+
+.agreement-section .keep-box {
+  margin: 10px 0;
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.agreement-section .hidden-check {
+  display: none;
+}
+
+.agreement-section .custom-label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--bg);
+  cursor: pointer;
+  position: relative;
+}
+
+.agreement-section .custom-label::before {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(0%, -50%);
+  width: max-content;
+  display: inline-block;
+}
+
+.agreement-section .custom-label::after {
+  content: '(필수)';
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: max-content;
+  font-size: 1.4rem;
+  color: var(--main-pink);
+}
+
+.agreement-section .custom-label.agreeTerms::before {
+  content: '이용약관 동의';
+}
+
+.agreement-section .custom-label.agreeTerms::after {
+  left: 135px;
+}
+
+.agreement-section .custom-label.agreePrivacy::before {
+  content: '개인정보 수집 및 이용 동의';
+}
+
+.agreement-section .custom-label.agreePrivacy::after {
+  left: 220px;
+}
+
+.agreement-section .hidden-check:checked + .custom-label {
+  background: var(--bg) url('/images/check-pink.png') no-repeat center;
+}
+
+.agreement-section .checkbox-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+}
+
+.agreement-section .agreement-title {
+  font-weight: var(--fw-bold);
+}
+
+.agreement-section .required-text {
+  color: var(--main-pink);
+}
+
+.agreement-section .agreement-content {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid var(--border3);
+  border-radius: var(--border-radius);
+  background-color: var(--text-white);
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.agreement-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-actions {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.btn-submit {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.6rem 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--main-blue);
+  color: var(--text-white);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:disabled {
+    background-color: var(--border2);
+
+    &:hover {
+      background-color: var(--border2);
+    }
+  }
+
+  &:hover {
+    background-color: var(--main-navy);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-label {
+    min-width: auto;
+    width: 90%;
+  }
+
+  .input-wrapper {
+    width: 90%;
+  }
+
+  .validation-message {
+    padding-left: 0;
+  }
+
+  .addressAtn {
+    width: 90%;
+  }
+
+  .date-inputs {
+    width: 100%;
+  }
+
+  .date-inputs .dropHeader {
+    width: 100%;
+  }
+
+  .date-inputs .dropHeader .dropBox {
+    width: 100%;
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 450px) {
+  .input-wrapper {
+    width: 100%;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .input-wrapper .form-input {
+    padding: 2rem 1.2rem;
+    width: 100%;
+  }
+
+  .checkIdBtn,
+  .checkEmailBtn,
+  .btnAuth {
+    width: 100%;
+    padding: 0.875rem 1rem;
+  }
+
+  .form-row {
+    margin-bottom: 2.8rem;
+  }
+
+  .form-row .form-label {
+    font-size: 1.6rem;
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .input-wrapper.radio-input {
+    align-items: start;
+    padding-left: 8px;
+  }
+
+  .radio-group {
+    width: fit-content;
+  }
+
+  .addressAtn {
+    width: 100%;
+  }
+}

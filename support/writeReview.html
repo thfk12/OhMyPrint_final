@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.png" />
+    <title>리뷰작성 - 오마이프린트</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="./css/writeReview.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
+    <script src="../js/include.js" defer></script>
+    <script type="module" src="./js/WriteReview.js" defer></script>
+  </head>
+
+  <body>
+    <!-- 헤더 -->
+    <header id="header"></header>
+    <main>
+      <div class="review-inner">
+        <div class="review-title">
+          <a href="../support/review.html">
+            <img src="/images/sub-arrow.svg" alt="" />
+            <span class="font28b">리뷰작성</span>
+          </a>
+        </div>
+        <form>
+          <div class="label-tag review-product">
+            <span class="font20b">상품명</span>
+            <span class="font20">일반명함</span>
+          </div>
+
+          <div class="label-tag star-grade">
+            <p class="font20b essential">별점</p>
+            <div class="stars">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="label-tag review-title">
+            <label for="review-title" class="font20b essential">리뷰 제목</label>
+            <input
+              class="font14"
+              type="text"
+              id="review-title"
+              name="reviewTitle"
+              placeholder="리뷰 제목을 작성해 주세요"
+              required />
+          </div>
+
+          <div class="label-tag review-content">
+            <label for="review-content" class="font20b essential">리뷰 내용</label>
+            <textarea
+              class="font14"
+              id="review-content"
+              name="reviewContent"
+              placeholder="리뷰 내용을 작성해 주세요"
+              required></textarea>
+          </div>
+
+          <div class="label-tag file-tag">
+            <label for="review-file" class="font20b">첨부파일</label>
+            <input type="file" id="review-file" name="reviewFile" />
+          </div>
+
+          <div class="review-end-btn">
+            <button disabled class="font20b">리뷰작성</button>
+          </div>
+        </form>
+      </div>
+      <div id="toast-container"></div>
+    </main>
+    <!-- 푸터 -->
+    <footer id="footer"></footer>
+  </body>
+</html>

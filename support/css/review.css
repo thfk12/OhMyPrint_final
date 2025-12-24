@@ -1,0 +1,57 @@
+.list-search-wrap .inquiry {
+  margin-left: 20px;
+}
+
+.review-list {
+  padding: 10px 120px;
+}
+
+.review-list .review-box {
+  border: 1px solid var(--border3);
+  border-radius: var(--border-radius);
+}
+
+.review-list .review-box a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.review-list .review-box a .img-box {
+  width: 180px;
+  height: 189px;
+  border-radius: 4px;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.review-list .review-box a .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.review-list .review-box a .text-box .title {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.review-list .review-box a .text-box p {
+  width: 679px;
+}
+
+.review-list .review-box a .stars {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background-color: rgba(100, 100, 0, 0.2);
+}
+
+.review-list .review-box a .stars span {
+  width: 43.2px;
+  height: 43.2px;
+  background-color: rgba(100, 0, 100, 0.2);
+}

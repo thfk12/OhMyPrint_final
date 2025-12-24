@@ -1,0 +1,202 @@
+.review-inner {
+  margin: 0 auto;
+  max-width: 80rem;
+  /* background-color: rgba(255, 0, 0, 0.2) */
+}
+
+.review-title > a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.review-title > a > img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.review-product {
+  height: fit-content;
+}
+
+.star-grade {
+  display: flex;
+  flex-direction: row;
+}
+
+.stars {
+  display: flex;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.stars span {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url('../../images/review/icon-review-grade.png') no-repeat center;
+  background-size: contain;
+}
+
+.stars span.active {
+  background: url('../../images/review/icon-review-grade-yellow.png') no-repeat center;
+  background-size: contain;
+}
+
+.label-tag {
+  position: relative;
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+}
+
+.essential::after {
+  content: '*';
+  color: var(--main-pink);
+  margin-left: 0.4rem;
+}
+
+textarea,
+.label-tag input[type='text'] {
+  border: none;
+  border-radius: 0.4rem;
+  height: 40rem;
+}
+
+.label-tag input[type='text'] {
+  color: var(--text-gray);
+  padding-left: 3rem;
+  height: 50px;
+}
+
+textarea {
+  color: var(--text-gray);
+  padding: 2rem 3rem;
+  height: 40rem;
+  resize: none;
+}
+
+input[type='file'] {
+  background-color: var(--bg);
+  height: 5rem;
+  margin-right: 13.5rem;
+  line-height: 5rem;
+  padding-left: 3rem;
+  font-size: 1.4rem;
+  color: var(--text-gray);
+  border-radius: 0.4rem;
+}
+
+input[type='file']::file-selector-button {
+  position: absolute;
+  right: -0.4rem;
+  background: var(--main-navy);
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: none;
+  width: 12.5rem;
+  height: 5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.review-end-btn {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+}
+.review-end-btn button {
+  cursor: pointer;
+  border-radius: 0.4rem;
+  background: var(--main-navy);
+  height: 100%;
+  color: var(--text-white);
+  padding: 0 16.5rem 0;
+
+  &:disabled {
+    background: var(--border2);
+
+    &:hover {
+      background: var(--border2);
+    }
+  }
+
+  &:hover {
+    background: var(--text-black);
+  }
+}
+
+/*---------------------- 반응형------------------------ */
+
+@media (max-width: 1040px) {
+  .review-inner {
+    max-width: 80rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .review-inner {
+    max-width: 70rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .review-inner {
+    max-width: 60rem;
+  }
+  .label-tag {
+    grid-template-columns: 15rem 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .review-inner {
+    max-width: 50rem;
+  }
+  .file-tag,
+  .star-grade,
+  .review-title,
+  .review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .review-product {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .label-tag input[type='text'],
+  textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 440px) {
+  .review-inner {
+    max-width: 40rem;
+  }
+  input[type='file'] {
+    margin-right: 8.5rem;
+  }
+  .review-end-btn > button {
+    padding: 0 10.5rem 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .review-inner {
+    max-width: 32rem;
+  }
+  input[type='file'] {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.png" />
+    <title>견적문의 - 오마이프린트</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="./css/writeQuote.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <script src="../js/common.js" defer></script>
+    <script src="../js/include.js" defer></script>
+    <script type="module" src="./js/writeQuote.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header id="header"></header>
+      <div class="inquiry-container font16">
+        <div class="quote-title-wrap">
+          <h2>
+            사용자 눈높이에 맞춘 최고의 디자인,
+            <span class="quote-color">맞춤형/견적</span>
+            <span class="quote-title">받아보세요!</span>
+          </h2>
+          <ul class="title">
+            <li>1:1컨설팅</li>
+            <li>최적화된 제품 제안</li>
+            <li>유지보수</li>
+            <li>전국 배송</li>
+          </ul>
+        </div>
+
+        <div class="input-wrap">
+          <form action="#" method="post" class="inquiry-form" enctype="multipart/form-data">
+            <div class="form-group font16">
+              <label class="required" for="username">성함/직함</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                placeholder="이름을 입력해주세요." />
+            </div>
+            <div class="form-group font16">
+              <label class="required" for="phone">연락처</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="010-xxxx-xxxx"
+                class="textinput" />
+            </div>
+            <div class="form-group font16">
+              <label class="required" for="email">업무용 이메일</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                required
+                placeholder="이메일을 입력해주세요." />
+            </div>
+
+            <div class="form-group font16">
+              <label for="fileUpload">첨부파일</label>
+              <input type="file" id="fileUpload" class="fileUpload" name="reviewFile" />
+            </div>
+
+            <div class="form-group font16">
+              <label class="required" for="category">카테고리</label>
+              <div class="dropHeader">
+                <div class="dropBox category font16">카테고리</div>
+                <ul id="sort" class="sort-list">
+                  <li class="print"><a class="font14" href="#void">실사출력</a></li>
+                  <li class="businessCard"><a class="font14" href="#void">명함</a></li>
+                  <li class="sign"><a class="font14" href="#void">간판</a></li>
+                  <li class="award"><a class="font14" href="#void">상패</a></li>
+                  <li class="catalog"><a class="font14" href="#void">카탈로그</a></li>
+                  <li class="coupon"><a class="font14" href="#void">쿠폰</a></li>
+                  <li class="promotion"><a class="font14" href="#void">홍보용품</a></li>
+                  <li class="banner"><a class="font14" href="#void">현수막</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-group font16">
+              <label class="required" for="inquiry">문의내용</label>
+              <textarea required class="textarea" placeholder="문의내용을 입력하세요."></textarea>
+            </div>
+          </form>
+
+          <div class="chack-list">
+            <p class="font16">개인정보 처리방침</p>
+            <div class="privacy-ckbox">
+              <input type="checkbox" id="privacy-ckbox" class="hidden-check" />
+              <label for="privacy-ckbox" class="font16 privacy custom-label"></label>
+              <!-- <span class="font18b"></span> -->
+              <a href="#" class="font16 show open-modal" data-target=".privacy-policy">[보기]</a>
+              <span class="font16 must">(필수)</span>
+            </div>
+          </div>
+          <button disabled href="./writeQuote-end.html" class="apply-btn">견적 신청하기</button>
+          <div class="inquiry-text-box">
+            <p>전화상담시 신속한 상담이 이루어집니다.</p>
+            <a href="#" class="number font28b">02-1234-5678</a>
+            <p>상담가능시간 : 09:00~18:00 (점심시간 12:00~13:30)</p>
+            <p class="ex">주말,공휴일 제외</p>
+          </div>
+        </div>
+      </div>
+      <div id="toast-container"></div>
+    </main>
+    <!-- 푸터 -->
+    <footer id="footer"></footer>
+  </body>
+</html>

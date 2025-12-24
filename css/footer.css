@@ -1,0 +1,228 @@
+/* 드롭박스 */
+.dropHeader {
+  position: relative;
+  min-width: fit-content;
+}
+
+.dropHeader .dropBox {
+  padding: 1.6rem 2rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg);
+  color: var(--text-gray);
+  cursor: pointer;
+  width: 14rem;
+}
+
+.dropHeader .dropBox::after {
+  content: '';
+  width: 1.6rem;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  margin-left: 1rem;
+  background: url(/images/arrow-down.png) no-repeat center;
+  background-size: contain;
+  filter: invert();
+}
+
+.dropHeader .dropBox:hover {
+  color: var(--text-black);
+  background: var(--border3);
+}
+
+.dropHeader .dropBox.active::after {
+  background: url(/images/arrow-up.png) no-repeat center;
+  background-size: contain;
+}
+
+.sort-list.active {
+  display: block;
+}
+
+.sort-list li a {
+  padding: 1rem 2rem;
+  display: inline-block;
+  color: var(--text-gray);
+  width: 100%;
+  border-radius: 0.4rem;
+}
+
+.sort-list li a:hover {
+  color: var(--text-black);
+  background: var(--border3);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+}
+
+footer .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+footer .inner .left-container .footer-logo {
+  width: 173px;
+  margin-bottom: 28px;
+  border-bottom: none;
+}
+
+footer .inner .left-container address {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-style: normal;
+}
+
+footer .inner .left-container address .font12 {
+  color: var(--text-gray);
+  cursor: default;
+}
+
+footer .inner .left-container address .company-info {
+  display: flex;
+  gap: 10px;
+}
+
+footer .inner .left-container address .company-info span::after {
+  content: '|';
+  color: var(--border3);
+  margin: 0 0 0 10px;
+}
+
+footer .inner .left-container address .company-info span:last-child::after {
+  content: '';
+  margin: 0;
+}
+
+footer .inner .right-container {
+  display: flex;
+  gap: 75px;
+}
+
+footer .inner .right-container .info-box,
+footer .inner .right-container .cs-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+footer .inner .right-container .info-box .title,
+footer .inner .right-container .cs-box .title {
+  margin-bottom: 4px;
+  cursor: default;
+}
+
+footer .inner .right-container .cs-box {
+  cursor: default;
+}
+
+footer .copy-wrap {
+  width: 100%;
+  background: var(--main-navy);
+  margin-top: 35px;
+}
+
+footer .copy-wrap .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+footer .copy-wrap .inner .user-data {
+  color: var(--border3);
+  display: flex;
+}
+
+footer .copy-wrap .inner .user-data button {
+  cursor: pointer;
+  background-color: inherit;
+  color: #fff;
+}
+
+footer .copy-wrap .inner .user-data button::after {
+  content: '|';
+  color: var(--border1);
+  margin: 0 10px 0 10px;
+}
+
+footer .copy-wrap .inner .user-data button:last-child::after {
+  content: '';
+  margin: 0;
+}
+
+footer .copy-wrap .inner p {
+  color: var(--border3);
+}
+
+@media (max-width: 1440px) {
+  footer .inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    gap: 4rem;
+  }
+
+  footer .inner .left-container .footer-logo {
+    margin: 2rem auto;
+  }
+
+  footer .inner .left-container address {
+    align-items: center;
+  }
+
+  footer .inner .left-container address .company-info span::after {
+    display: none;
+  }
+
+  footer .inner .right-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  footer .inner .right-container .info-box .cs-box .font20b {
+    font-size: 1.6rem;
+  }
+
+  footer .inner .right-container .font14 {
+    display: none;
+  }
+
+  footer .inner .right-container .info-box {
+    display: none;
+  }
+
+  footer .copy-wrap .inner {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1024px) {
+  footer .inner {
+    width: 100%;
+  }
+
+  footer .copy-wrap .inner {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  footer .inner .left-container address .company-info {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  footer .copy-wrap .inner {
+    gap: 20px;
+  }
+}

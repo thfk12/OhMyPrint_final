@@ -1,0 +1,116 @@
+.privacy-policy,
+.terms-of-service,
+.user-guide {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background: #ffffffdf;
+}
+
+.privacy-policy h2,
+.terms-of-service h2,
+.user-guide h2 {
+  margin-bottom: 20px;
+}
+
+.privacy-policy .wrap,
+.terms-of-service .wrap,
+.user-guide .wrap {
+  max-width: 50%;
+  min-width: 30rem;
+  border-radius: 30px;
+  max-height: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-color: #ddd;
+  padding: 2rem 4px;
+}
+
+.privacy-policy .wrap .inner,
+.terms-of-service .wrap .inner,
+.user-guide .wrap .inner {
+  overscroll-behavior: contain;
+  overflow-y: scroll;
+  height: 100%;
+  padding: 0 4rem 0 2rem;
+  background: inherit;
+}
+
+.privacy-policy .wrap .inner h2,
+.terms-of-service .wrap .inner h2,
+.user-guide .wrap .inner h2 {
+  font-size: 2.4rem;
+}
+
+.privacy-policy .wrap .inner h3,
+.terms-of-service .wrap .inner h3,
+.user-guide .wrap .inner h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.privacy-policy .wrap .inner p,
+.terms-of-service .wrap .inner p,
+.user-guide .wrap .inner p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+  line-height: 2;
+  text-align: center;
+}
+
+.privacy-policy .wrap .inner strong,
+.terms-of-service .wrap .inner strong,
+.user-guide .wrap .inner strong {
+  margin: 0;
+  text-align: l;
+}
+
+.privacy-policy .wrap .inner ul,
+.terms-of-service .wrap .inner ul,
+.user-guide .wrap .inner ul {
+  margin-bottom: 20px;
+}
+
+.privacy-policy .wrap .inner ul li,
+.terms-of-service .wrap .inner ul li,
+.user-guide .wrap .inner ul li {
+  font-size: 1.6rem;
+  text-indent: 16px;
+  line-height: 2;
+}
+
+.privacy-policy .wrap .inner ul li::before,
+.terms-of-service .wrap .inner ul li::before,
+.user-guide .wrap .inner ul li::before {
+  content: '-';
+  margin-right: 2px;
+}
+
+.privacy-policy .wrap .btn-box,
+.terms-of-service .wrap .btn-box,
+.user-guide .wrap .btn-box {
+  text-align: center;
+}
+
+.privacy-policy .wrap .btn-box .modal-close,
+.terms-of-service .wrap .btn-box .modal-close,
+.user-guide .wrap .btn-box .modal-close {
+  padding: 2px 8px;
+  margin: 1rem auto;
+  border-bottom: 1px solid var(--text-black);
+}
+
+.privacy-policy .wrap .btn-box .modal-close:hover,
+.terms-of-service .wrap .btn-box .modal-close:hover,
+.user-guide .wrap .btn-box .modal-close:hover {
+  color: var(--sub-blue);
+}

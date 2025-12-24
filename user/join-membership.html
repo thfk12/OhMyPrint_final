@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.png" />
+    <title>회원가입 - 오마이프린트</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="./css/join-membership.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
+    <script src="../js/include.js" defer></script>
+    <script type="module" src="./js/join.js" defer></script>
+  </head>
+
+  <body>
+    <header id="header"></header>
+    <main>
+      <div class="container">
+        <div class="form-header">
+          <h1 class="form-title">회원가입</h1>
+        </div>
+
+        <form method="post" action="./join-membership-end.html">
+          <!-- 아이디 -->
+          <div class="form-row">
+            <label for="userId" class="form-label font20b">
+              아이디
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="userId"
+                name="userId"
+                class="form-input font16"
+                placeholder="아이디를 입력해주세요"
+                required />
+              <button type="button" class="checkIdBtn font16">중복확인</button>
+            </div>
+          </div>
+
+          <!-- 비밀번호 -->
+          <div class="form-row">
+            <label for="password" class="form-label font20b">
+              비밀번호
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-input font16"
+                placeholder="비밀번호를 입력해주세요"
+                required />
+            </div>
+          </div>
+
+          <!-- 비밀번호 확인 -->
+          <div class="form-row">
+            <label for="passwordConfirm" class="form-label font20b">
+              비밀번호 확인
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="passwordConfirm"
+                name="passwordConfirm"
+                class="form-input font16"
+                placeholder="비밀번호를 다시 한번 입력해주세요"
+                required />
+            </div>
+          </div>
+          <div class="validation-message validation-error font14" id="passwordError">
+            비밀번호가 일치하지 않습니다.
+          </div>
+          <div class="validation-message validation-success font14" id="passwordSuccess">
+            비밀번호가 일치합니다.
+          </div>
+
+          <!-- 이름 -->
+          <div class="form-row">
+            <label for="userName" class="form-label font20b">
+              이름
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="userName"
+                name="userName"
+                class="form-input font16"
+                placeholder="이름을 입력해주세요"
+                required />
+            </div>
+          </div>
+
+          <!-- 이메일 -->
+          <div class="form-row">
+            <label class="form-label font20b">
+              이메일
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <div class="email-inputs">
+                <input
+                  type="text"
+                  name="emailLocal"
+                  class="form-input font16 email-local"
+                  required />
+                <span class="email-at">@</span>
+                <input
+                  type="text"
+                  name="emailDomain"
+                  class="form-input font16 email-domain"
+                  required />
+                <div class="dropHeader">
+                  <div class="dropBox font14 email-domain">직접입력</div>
+                  <ul id="sort" class="sort-list mail-list">
+                    <li class="naver"><a class="font14" href="#void">naver</a></li>
+                    <li class="google"><a class="font14" href="#void">google</a></li>
+                    <li class="kakao"><a class="font14" href="#void">kakao</a></li>
+                    <li class="hanmail"><a class="font14" href="#void">hanmail</a></li>
+                  </ul>
+                </div>
+              </div>
+              <button type="button" class="checkEmailBtn font16">중복확인</button>
+            </div>
+          </div>
+
+          <!-- 연락처 -->
+          <div class="form-row">
+            <label class="form-label font20b">
+              연락처
+              <span class="required">*</span>
+            </label>
+            <div class="input-wrapper">
+              <div class="phone-inputs">
+                <div class="dropHeader">
+                  <div class="dropBox telecom font16">통신사</div>
+                  <ul id="sort" class="sort-list">
+                    <li class="SKT"><a class="font14" href="#void">SKT</a></li>
+                    <li class="KT"><a class="font14" href="#void">KT</a></li>
+                    <li class="LG"><a class="font14" href="#void">LG</a></li>
+                  </ul>
+                </div>
+
+                <input
+                  type="text"
+                  name="phoneEnd"
+                  class="form-input userPhone1 font16"
+                  maxlength="4"
+                  required />
+                <input
+                  type="text"
+                  name="phoneEnd"
+                  class="form-input userPhone2 font16"
+                  maxlength="4"
+                  required />
+                <input
+                  type="text"
+                  name="phoneEnd"
+                  class="form-input userPhone3 font16"
+                  maxlength="4"
+                  required />
+              </div>
+              <button type="button" class="btnAuth font16">본인인증</button>
+            </div>
+          </div>
+
+          <!-- 주소 -->
+          <div class="form-row">
+            <label class="form-label font20b">주소</label>
+
+            <button type="button" class="addressAtn font16">주소검색</button>
+          </div>
+
+          <!-- 성별 -->
+          <div class="form-row">
+            <span class="form-label font20b">성별</span>
+            <div class="input-wrapper radio-input">
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                    class="radio-input" />
+                  <label for="female" class="radio-label font16">여자</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="male" name="gender" value="male" class="radio-input" />
+                  <label for="male" class="radio-label font16">남자</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 생년월일 -->
+          <div class="form-row">
+            <span class="form-label font20b">생년월일</span>
+            <div class="input-wrapper">
+              <div class="date-inputs birthWrap">
+                <!-- 연도 -->
+                <div class="birthYearSort Sort dropHeader">
+                  <div class="dropBox birthYear font16">년도</div>
+                  <ul id="birthYearSort" class="sort-list">
+                    <li data-set="2025"><a class="font14" href="#void">2025년</a></li>
+                    <li data-set="2024"><a class="font14" href="#void">2024년</a></li>
+                    <li data-set="2023"><a class="font14" href="#void">2023년</a></li>
+                    <li data-set="2022"><a class="font14" href="#void">2022년</a></li>
+                    <li data-set="2021"><a class="font14" href="#void">2021년</a></li>
+                    <li data-set="2020"><a class="font14" href="#void">2020년</a></li>
+                  </ul>
+                </div>
+                <!-- 월 -->
+                <div class="birthMonthSort Sort dropHeader">
+                  <div class="dropBox birthMonth font16">월</div>
+                  <ul id="birthMonthSort" class="sort-list">
+                    <li data-set="1"><a class="font14" href="#void">1월</a></li>
+                    <li data-set="2"><a class="font14" href="#void">2월</a></li>
+                    <li data-set="3"><a class="font14" href="#void">3월</a></li>
+                    <li data-set="4"><a class="font14" href="#void">4월</a></li>
+                    <li data-set="5"><a class="font14" href="#void">5월</a></li>
+                    <li data-set="6"><a class="font14" href="#void">6월</a></li>
+                    <li data-set="7"><a class="font14" href="#void">7월</a></li>
+                    <li data-set="8"><a class="font14" href="#void">8월</a></li>
+                    <li data-set="9"><a class="font14" href="#void">9월</a></li>
+                    <li data-set="10"><a class="font14" href="#void">10월</a></li>
+                    <li data-set="11"><a class="font14" href="#void">11월</a></li>
+                    <li data-set="12"><a class="font14" href="#void">12월</a></li>
+                  </ul>
+                </div>
+                <!-- 일 -->
+                <div class="birthDaySort Sort dropHeader">
+                  <div class="dropBox birthDay font16">일</div>
+                  <ul id="birthDaySort" class="sort-list">
+                    <li data-set="1"><a class="font14" href="#void">1일</a></li>
+                    <li data-set="2"><a class="font14" href="#void">2일</a></li>
+                    <li data-set="3"><a class="font14" href="#void">3일</a></li>
+                    <li data-set="4"><a class="font14" href="#void">4일</a></li>
+                    <li data-set="5"><a class="font14" href="#void">5일</a></li>
+                    <li data-set="6"><a class="font14" href="#void">6일</a></li>
+                    <li data-set="7"><a class="font14" href="#void">7일</a></li>
+                    <li data-set="8"><a class="font14" href="#void">8일</a></li>
+                    <li data-set="9"><a class="font14" href="#void">9일</a></li>
+                    <li data-set="10"><a class="font14" href="#void">10일</a></li>
+                    <li data-set="11"><a class="font14" href="#void">11일</a></li>
+                    <li data-set="12"><a class="font14" href="#void">12일</a></li>
+                    <li data-set="13"><a class="font14" href="#void">13일</a></li>
+                    <li data-set="14"><a class="font14" href="#void">14일</a></li>
+                    <li data-set="15"><a class="font14" href="#void">15일</a></li>
+                    <li data-set="16"><a class="font14" href="#void">16일</a></li>
+                    <li data-set="17"><a class="font14" href="#void">17일</a></li>
+                    <li data-set="18"><a class="font14" href="#void">18일</a></li>
+                    <li data-set="19"><a class="font14" href="#void">19일</a></li>
+                    <li data-set="20"><a class="font14" href="#void">20일</a></li>
+                    <li data-set="21"><a class="font14" href="#void">21일</a></li>
+                    <li data-set="22"><a class="font14" href="#void">22일</a></li>
+                    <li data-set="23"><a class="font14" href="#void">23일</a></li>
+                    <li data-set="24"><a class="font14" href="#void">24일</a></li>
+                    <li data-set="25"><a class="font14" href="#void">25일</a></li>
+                    <li data-set="26"><a class="font14" href="#void">26일</a></li>
+                    <li data-set="27"><a class="font14" href="#void">27일</a></li>
+                    <li data-set="28"><a class="font14" href="#void">28일</a></li>
+                    <li data-set="29"><a class="font14" href="#void">29일</a></li>
+                    <li data-set="30"><a class="font14" href="#void">30일</a></li>
+                    <li data-set="31"><a class="font14" href="#void">31일</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 이용약관 동의 -->
+          <div class="agreement-section">
+            <div class="keep-box">
+              <input type="checkbox" id="agreeTerms" class="hidden-check" />
+              <label for="agreeTerms" class="font18b custom-label agreeTerms"></label>
+            </div>
+            <div class="agreement-content font14">
+              <p>
+                <strong>제1조 (목적)</strong>
+                <br />
+                본 약관은 [사이트명] (이하 "회사")가 제공하는 모든 서비스(이하 "서비스")의 이용 조건
+                및 절차, 이용자와 회사의 권리·의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로
+                합니다.
+              </p>
+
+              <p>
+                <strong>제2조 (용어의 정의)</strong>
+                <br />
+                "회원"이라 함은 본 약관에 동의하고 회사와 서비스 이용 계약을 체결한 자를 말합니다.
+                "아이디(ID)"는 회원 식별과 서비스 이용을 위하여 회원이 정하고 회사가 승인한
+                문자·숫자의 조합입니다.
+              </p>
+
+              <p>
+                <strong>제3조 (약관의 효력 및 변경)</strong>
+                <br />
+                본 약관은 서비스 화면에 게시하거나 기타의 방법으로 공지함으로써 효력이 발생합니다.
+                회사는 관련 법령을 위배하지 않는 범위에서 본 약관을 변경할 수 있습니다.
+              </p>
+
+              <p>
+                <strong>제4조 (회원가입)</strong>
+                <br />
+                회원가입은 이용자가 약관의 내용에 동의하고, 회사가 정한 가입 양식을 작성하여 가입을
+                신청한 후 회사가 이를 승낙함으로써 완료됩니다. 회사는 다음 각 호에 해당하는 경우
+                가입 신청을 거부할 수 있습니다. 허위 정보를 기재한 경우 타인의 명의를 도용한 경우
+                사회의 안녕질서 또는 미풍양속을 저해할 우려가 있는 경우
+              </p>
+
+              <p>
+                <strong>제5조 (서비스 이용)</strong>
+                <br />
+                회사는 회원에게 안정적으로 서비스를 제공합니다. 서비스의 내용, 이용 방법, 제공
+                시간은 회사의 사정에 따라 변경될 수 있습니다.
+              </p>
+
+              <p>
+                <strong>제6조 (개인정보 보호)</strong>
+                <br />
+                회사는 회원의 개인정보를 보호하기 위하여 관련 법령이 정하는 바를 준수하며, 개인정보
+                처리방침에 따라 개인정보를 수집·이용·보관·처리합니다.
+              </p>
+              <p>
+                <strong>제7조 (이용자의 의무)</strong>
+                <br />
+                회원은 다음 행위를 하여서는 안 됩니다. 타인의 개인정보 도용 서비스의 운영을 방해하는
+                행위 법령 및 약관을 위반하는 행위 회원은 본인의 계정 및 비밀번호를 안전하게 관리할
+                책임이 있습니다.
+              </p>
+              <p>
+                <strong>제8조 (서비스의 중단)</strong>
+                <br />
+                회사는 정기 점검, 서버 교체, 서비스 개선 등을 위하여 서비스 제공을 일시적으로 중단할
+                수 있습니다.
+              </p>
+              <p>
+                <strong>제9조 (계약 해지 및 이용 제한)</strong>
+                <br />
+                회원이 서비스 이용 계약을 해지하고자 하는 경우, 고객센터를 통해 해지 신청을 할 수
+                있습니다. 회사는 회원이 약관을 위반한 경우 사전 통보 없이 이용을 제한하거나 계약을
+                해지할 수 있습니다.
+              </p>
+              <p>
+                <strong>제10조 (면책 조항)</strong>
+                <br />
+                회사는 천재지변, 불가항력으로 인해 서비스를 제공할 수 없는 경우 책임이 면제됩니다.
+                회원의 귀책 사유로 인한 서비스 이용 장애에 대하여 회사는 책임을 지지 않습니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- 개인정보 수집 및 이용 동의 -->
+          <div class="agreement-section">
+            <div class="keep-box">
+              <input type="checkbox" id="agreePrivacy" class="hidden-check" />
+              <label for="agreePrivacy" class="font18b agreePrivacy custom-label"></label>
+            </div>
+
+            <div class="agreement-content font14">
+              <p>
+                <strong>1. 수집하는 개인정보 항목</strong>
+                <br />
+                회원가입 시: 이름, 아이디, 비밀번호, 이메일 주소, 휴대전화 번호
+                <br />
+                서비스 이용 과정에서 자동 수집되는 정보: 접속 IP, 쿠키, 서비스 이용 기록, 기기 정보
+                등
+              </p>
+
+              <p>
+                <strong>2. 개인정보 수집·이용 목적</strong>
+                <br />
+                회원가입 및 본인 확인, 서비스 제공 및 계약 이행, 고객 문의 응대 및 불만 처리, 서비스
+                관련 공지 및 고지사항 전달
+              </p>
+
+              <p>
+                <strong>3. 개인정보 보유·이용 기간</strong>
+                <br />
+                회원 탈퇴 시까지 보관 후 지체 없이 파기. 단, 관계 법령에 따라 보관이 필요한 경우
+                해당 기간 동안 보관
+              </p>
+
+              <p>
+                <strong>4. 동의 거부 권리 및 불이익 안내</strong>
+                <br />
+                이용자는 개인정보 수집 및 이용에 동의하지 않을 권리가 있습니다. 단, 필수 항목에
+                동의하지 않을 경우 회원가입 및 서비스 이용이 제한될 수 있습니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" disabled class="btn-submit font18b">회원가입</button>
+          </div>
+        </form>
+      </div>
+      <div id="toast-container"></div>
+    </main>
+
+    <footer id="footer"></footer>
+  </body>
+</html>

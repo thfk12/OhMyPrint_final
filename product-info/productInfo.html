@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.png" />
+    <title>상품 상세페이지 - 오마이프린트</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="./css/productInfo.css" />
+    <link rel="stylesheet" href="./css/respond.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/review-box.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/include.js" defer></script>
+    <script src="./js/productInfo.js" defer></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <!-- item-main -->
+    <main>
+      <div class="item-main-wrap">
+        <div class="inner">
+          <!-- slider img -->
+          <div class="item-main-left">
+            <!-- 슬라이더 프리뷰 메인 -->
+            <div class="swiper mySwiper2 item-slider-main">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/item-img1.png" alt="메인이미지" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img2.png" alt="메인이미지" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img3.png" alt="메인이미지" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img4.png" alt="메인이미지" />
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <!-- 슬라이더 프리뷰 썸네일 -->
+            <div data-thumbsslider class="swiper mySwiper item-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/item-img-small1.png" alt="미리보기1" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img-small2.png" alt="미리보기2" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img-small3.png" alt="미리보기3" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/item-img-small4.png" alt="미리보기4" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item select -->
+          <div class="item-main-right">
+            <div class="item-main-top-wrap">
+              <ul class="item-main-top-title">
+                <li class="item-main-badge">
+                  <ul>
+                    <li class="font14">NEW</li>
+                    <li class="font14">HOT</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="item-main-top-itemlist">
+                    <li class="item-main-title font20b">프리미엄 고급지 명함</li>
+                    <li class="item-main-price font18">5,900원 ~</li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="item-main-top-text-box">
+                <p class="font16b period">
+                  제작기간
+                  <span>평균 1-2일 소요</span>
+                </p>
+                <p class="font16b day">
+                  당일제작
+                  <span>당일신청 당일제작</span>
+                </p>
+              </div>
+            </div>
+            <div class="item-main-select-wrap">
+              <div class="item-main-select">
+                <p class="font16b">
+                  당일제작신청
+                  <span>신청 시 효과 선택 불가</span>
+                </p>
+                <ul>
+                  <li class="select-btn font16"><button>미신청</button></li>
+                  <li class="select-btn font16"><button>신청</button></li>
+                </ul>
+              </div>
+              <div class="item-main-select">
+                <p class="font16b">사이즈</p>
+                <div class="select-size-wrap">
+                  <ul>
+                    <li class="select-btn font16"><button>90 x 50</button></li>
+                    <li class="select-btn font16"><button>50 x 90</button></li>
+                  </ul>
+                  <ul>
+                    <li class="select-btn font16"><button>86 x 52</button></li>
+                    <li class="select-btn font16"><button>52 x 86</button></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item-main-select">
+                <p class="font16b">양/단면</p>
+                <ul>
+                  <li class="select-btn font16"><button>양면</button></li>
+                  <li class="select-btn font16"><button>단면</button></li>
+                </ul>
+              </div>
+              <div class="item-main-select">
+                <p class="font16b">모서리</p>
+                <ul>
+                  <li class="select-btn font16"><button>직각</button></li>
+                  <li class="select-btn font16"><button>라운드</button></li>
+                </ul>
+              </div>
+              <div class="item-main-select">
+                <p class="font16b">코팅</p>
+                <ul>
+                  <li class="select-btn font16"><button>있음</button></li>
+                  <li class="select-btn font16"><button>없음</button></li>
+                </ul>
+              </div>
+              <div class="item-main-select-file-wrap">
+                <p class="font16b">
+                  <label class="checkbox">디자인 업로드</label>
+                  <!-- <input type="checkbox" id="designCheck" /> -->
+                </p>
+                <p class="item-main-select-file">
+                  <!-- <label for="selectFile" class="selectFile"></label
+                  ><input type="file" id="selectFile" /> -->
+                  <!-- <button class="selectFile">
+                    <input type="file" id="selectFile" class="font16" />
+                  </button> -->
+
+                  <input type="file" id="fileupload" class="fileupload" />
+                  <label for="fileupload" class="custom-file-btn">파일 선택</label>
+                  <span class="file-name font16">선택된 파일 없음</span>
+                </p>
+                <!-- <ul class="checkbox"> -->
+                <!-- <li class="checkbox-btn"><a href="#" class="font16">파일선택</a></li>
+                  <li class="font16">선택된 파일 없음</li> -->
+                <!-- <li class="checkbox-btn"><input type="file" /></li>
+                </ul> -->
+              </div>
+            </div>
+            <div class="count-buy-wrap">
+              <ul class="item-main-buy">
+                <li>
+                  <button type="button" class="count-btn-min font16">
+                    <!-- <img src="./images/count-btn-min.png" alt="수량 감소" /> -->
+                  </button>
+                </li>
+                <li class="count-num font16b"><span>0</span></li>
+                <li>
+                  <button type="button" class="count-btn-plus font16">
+                    <!-- <img src="./images/count-btn-plus.png" alt="수량 증가" /> -->
+                  </button>
+                </li>
+              </ul>
+              <a href="#" class="font16">구매하기</a>
+            </div>
+          </div>
+        </div>
+        <!-- 상세페이지 서브메뉴바 -->
+        <nav class="item-detail-menubar-wrap">
+          <ul class="item-detail-menubar">
+            <li class="font20b active" data-target="detail"><a href="#void">상품소개</a></li>
+            <li class="font20b" data-target="size"><a href="#void">사이즈</a></li>
+            <li class="font20b" data-target="option"><a href="#void">옵션</a></li>
+            <li class="font20b" data-target="guide"><a href="#void">작업가이드</a></li>
+            <li class="font20b" data-target="buyinfo"><a href="#void">유의사항</a></li>
+            <li class="font20b" data-target="review"><a href="#void">리뷰</a></li>
+          </ul>
+        </nav>
+        <!-- item-detail 상품소개 -->
+        <section class="navSection sub-item-detail" id="detail">
+          <div class="detail-top">
+            <h2 class="font20b">일반명함</h2>
+            <img src="./images/item-detail-card.png" alt="일반명함" />
+          </div>
+          <div class="detail-middle">
+            <h3>오마이프린트 베스트명함</h3>
+            <p class="font16">부드러운 감촉과 단단한 두께가 특징이에요.</p>
+            <ul class="font12">
+              <li>대중적인 표준사이즈의 명함</li>
+              <li>평량 350gsm으로 강도가 있는 단단한 용지에요.</li>
+              <li>두가지 모서리 스타일이 준비되어 있어요.</li>
+            </ul>
+          </div>
+          <ul class="detail-bottom">
+            <li>
+              <p class="font20b">앞</p>
+              <img src="./images/item-detail-front.png" alt="명함앞" />
+            </li>
+            <li>
+              <p class="font20b">뒤</p>
+              <img src="./images/item-detail-back.png" alt="명함뒤" />
+            </li>
+          </ul>
+        </section>
+
+        <!-- item-size 사이즈 -->
+        <section class="navSection sub-item-size hidden" id="size">
+          <h2 class="font20b">사이즈 안내</h2>
+          <p class="pink-text-box font20b">신용카드 사이즈와 비교해보세요.</p>
+          <div class="size-img-box">
+            <img src="./images/item-detail-size.png" alt="사이즈" />
+          </div>
+        </section>
+
+        <!-- item-option 옵션 -->
+        <section class="navSection sub-item-option hidden" id="option">
+          <h2 class="font20b">디자인을 더욱 돋보이게 할 모서리 스타일을 만나보세요.</h2>
+          <div class="option-sq-wrap">
+            <div class="option-sq">
+              <img src="./images/item-detail-option-sq.png" alt="직각모서리" />
+              <h3 class="font20b">직각 모서리</h3>
+              <ul class="font12">
+                <li>직각으로 마감된 형태로 깔끔하고 정돈된 느낌을 자아냅니다.</li>
+                <li>가장 전통적이며 신뢰감 있는 이미지를 줄 수 있습니다.</li>
+              </ul>
+            </div>
+            <div class="option-rec">
+              <img src="./images/item-detail-option-rec.png" alt="둥근모서리" />
+              <h3 class="font20b">둥근 모서리</h3>
+              <ul class="font12">
+                <li>사방 5mm 라운드 처리된 둥근 마감 형태로 부드럽고 친근한 느낌을 자아냅니다.</li>
+                <li>현대적이고 세련된 이미지를 강조할 수 있습니다.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- item-guide 작업가이드 -->
+        <section class="navSection sub-item-guide hidden" id="guide">
+          <h2 class="font20b">따라 하기만 하면 쉽게 완성할 수 있는 작업가이드를 준비했어요.</h2>
+          <a href="#" class="pink-text-box font20b">PDF 작업가이드 다운로드</a>
+          <div class="guide-wrap">
+            <div class="guide-left">
+              <p class="font20b">90 X 50</p>
+              <div class="guide-90x50">
+                <div class="guide-90x50-img">
+                  <span class="guide-90x50-ver"></span>
+                  <span class="guide-90x50-small"></span>
+                </div>
+                <p class="guide-90x50-text">
+                  <span class="frame1">작업 영역</span>
+                  <span class="frame2">재단 영역</span>
+                  <span class="frame3">안전 영역</span>
+                </p>
+              </div>
+            </div>
+            <div class="guide-right">
+              <p class="font20b">86 X 52</p>
+              <div class="guide-86x52">
+                <p class="guide-86x52-img">
+                  <span class="guide-86x52-ver"></span>
+                  <span class="guide-86x52-small"></span>
+                </p>
+                <p class="guide-86x52-text">
+                  <span class="frame1">작업 영역</span>
+                  <span class="frame2">재단 영역</span>
+                  <span class="frame3">안전 영역</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- item-buyinfo 유의사항 -->
+        <div class="navSection sub-item-buyinfo hidden" id="buyinfo">
+          <!-- 배송 방법 및 안내 -->
+          <div class="info-shipping">
+            <div class="buyinfo-left">
+              <img src="./images/item-detail-icon-shipping.png" alt="배송아이콘" />
+              <p class="font20b">배송 방법 및 안내</p>
+            </div>
+            <ul class="buyinfo-right shipping">
+              <li>
+                <span class="font16b">배송방법</span>
+                <span class="font16">택배</span>
+              </li>
+              <li>
+                <span class="font16b">배송비용</span>
+                <span class="font16">3,500원</span>
+              </li>
+              <li>
+                <span class="font16b">배송기간</span>
+                <span class="font16">3일 ~ 7일</span>
+              </li>
+              <li class="shipping-text-long">
+                <span class="font16b">배송안내</span>
+                <div class="text-box">
+                  <p class="font16">
+                    산간벽지나 도서지방은 별도의 추가금액을 지불하셔야 하는 경우가 있습니다.
+                  </p>
+                  <p class="font16">
+                    주문하신 상품은 입금 확인 후 배송해드립니다. 다만, 상품 종류에 따라서 상품의
+                    배송이 다소 지연될 수 있습니다.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 교환 및 반품 정보 -->
+          <div class="info-refund">
+            <div class="buyinfo-left">
+              <img src="./images/item-detail-icon-refund.png" alt="교환환불아이콘" />
+              <p class="font20b">교환 및 반품 정보</p>
+            </div>
+            <ul class="buyinfo-right">
+              <li>
+                <strong class="refundT font16b">교환 및 반품 주소</strong>
+                <p class="font16">[15010] 경기도 시흥시 배곧5로 74 (정왕동) 지음프라자ll,602호</p>
+              </li>
+              <li>
+                <strong class="refund font16b">교환 및 반품이 가능한 경우</strong>
+                <p class="font16">계약내용에 관한 서면을 받은 날부터 7일.</p>
+                <p class="font16">
+                  단, 그 서면을 받은 때보다 재화등의 공급이 늦게 이루어진 경우에는 재화등을
+                  공급받거나 재화등의 공급이 시작된 날부터 7일 이내
+                </p>
+              </li>
+              <li>
+                <strong class="refund font16b">교환 및 반품이 불가능한 경우</strong>
+                <p class="font16">이용자에게 책임 있는 사유로 재화 등이 멸실 또는 훼손된 경우</p>
+                <p class="font14">
+                  (다만, 재화 등의 내용을 확인하기 위하여 포장 등을 훼손한 경우에는 청약 철회를 할
+                  수 있습니다)
+                </p>
+                <p class="font16">
+                  이용자의 사용 또는 일부 소비에 의하여 재화 등의 가치가 현저히 감소한 경우
+                </p>
+                <p class="font16">
+                  시간의 경과에 의하여 재판매가 곤란할 정도로 재화등의 가치가 현저히 감소한 경우
+                </p>
+                <p class="font16">복제가 가능한 재화등의 포장을 훼손한 경우</p>
+                <p class="font16">
+                  개별 주문 생산되는 재화 등 청약철회시 판매자에게 회복할 수 없는 피해가 예상되어
+                  소비자의 사전 동의를 얻은 경우
+                </p>
+                <p class="font16">디지털 콘텐츠의 제공이 개시된 경우,</p>
+                <p class="font14">
+                  (다만, 가분적 용역 또는 가분적 디지털콘텐츠로 구성된 계약의 경우 제공이 개시되지
+                  아니한 부분은 청약 철회를 할 수 있습니다.)
+                </p>
+                <p class="font16">
+                  <strong>
+                    *고객님의 마음이 바뀌어 교환, 반품을 하실 경우 상품반송 비용은 고객님께서
+                    부담하셔야 합니다.
+                  </strong>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 상품 결제 정보 -->
+          <div class="info-payment">
+            <div class="buyinfo-left">
+              <img src="./images/item-detail-icon-info.png" alt="상품결제정보아이콘" />
+              <p class="font20b">상품 결제 정보</p>
+            </div>
+            <div class="buyinfo-right">
+              <p class="font16b">
+                고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다.
+              </p>
+              <p class="font16">
+                확인과정에서 도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 판단될
+                경우 임의로 주문을 보류 또는 취소할 수 있습니다.  
+              </p>
+              <p class="font16b">
+                무통장 입금은 상품 구매 대금은 PC뱅킹, 인터넷뱅킹, 텔레뱅킹 혹은 가까운 은행에서
+                직접 입금하시면 됩니다.
+              </p>
+              <p class="font16">
+                 주문시 입력한 입금자명과 실제입금자의 성명이 반드시 일치하여야 하며, 7일 이내로
+                입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- item-review 리뷰 -->
+        <div class="navSection sub-item-review hidden" id="review">
+          <div class="review-box-wrap">
+            <div class="review-more-btn">
+              <a href="/support/writeReview.html" class="font16b">리뷰작성</a>
+            </div>
+            <div class="review-box-inner">
+              <div class="review-box">
+                <div class="review-img-text-wrap">
+                  <div class="review-img-box">
+                    <img src="../images/review/reviewimg.png" alt="미리보기이미지" />
+                  </div>
+                  <div class="review-text-box">
+                    <div class="top">
+                      <p class="review-text-title font18b">프리미엄 고급지 명함</p>
+                      <div class="review-star-icon">
+                        <p class="star active"></p>
+                        <p class="star active"></p>
+                        <p class="star active"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                      </div>
+                    </div>
+                    <p class="review-text-middle font14">
+                      옵션: 당일 미신청 / 사이즈 90 x 50 / 양면 / 라운드 / 코팅 있음
+                    </p>
+                    <div class="review-text-content">
+                      <p class="font14">
+                        라운드 처리와 코팅 덕분에 손에 쥐었을 때 고급스러움이 확 느껴집니다. 단면
+                        디자인이라 깔끔하고 한눈에 정보 전달이 잘돼요. 특히 당일 신청 덕분에 급할 때
+                        정말 유용했습니다.
+                      </p>
+                    </div>
+                    <p class="font14 resName">
+                      2025.08.21
+                      <span>김*원</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="review-box">
+                <div class="review-img-text-wrap">
+                  <div class="review-img-box">
+                    <img src="../images/review/reviewimg.png" alt="미리보기이미지" />
+                  </div>
+                  <div class="review-text-box">
+                    <div class="top">
+                      <p class="review-text-title font18b">프리미엄 고급지 명함</p>
+                      <div class="review-star-icon">
+                        <p class="star active"></p>
+                        <p class="star active"></p>
+                        <p class="star active"></p>
+                        <p class="star active"></p>
+                        <p class="star active"></p>
+                      </div>
+                    </div>
+                    <p class="review-text-middle font14">
+                      옵션: 당일 신청 / 사이즈 90 x 50 / 단면 / 직각 / 코팅 없음
+                    </p>
+                    <div class="review-text-content">
+                      <p class="font14">
+                        심플함과 실용성을 동시에 만족시키는 명함이었습니다. 직각 모서리가 정돈된
+                        느낌을 주고, 코팅이 없어서 종이 질감을 그대로 느낄 수 있어 좋았어요. 급히
+                        필요할 때 당일 신청 옵션도 매우 만족스럽습니다.
+                      </p>
+                    </div>
+                    <p class="font14 resName">
+                      2025.08.21
+                      <span>김*원</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="review-box">
+                <div class="review-img-text-wrap">
+                  <div class="review-img-box">
+                    <img src="../images/review/reviewimg.png" alt="미리보기이미지" />
+                  </div>
+                  <div class="review-text-box">
+                    <div class="top">
+                      <p class="review-text-title font18b">프리미엄 고급지 명함</p>
+                      <div class="review-star-icon">
+                        <p class="star active"></p>
+                        <p class="star active"></p>
+                        <p class="star active"></p>
+                        <p class="star active"></p>
+                        <p class="star"></p>
+                      </div>
+                    </div>
+                    <p class="review-text-middle font14">
+                      옵션: 당일 신청 / 사이즈 90 x 50 / 단면 / 라운드 / 코팅 있음
+                    </p>
+                    <div class="review-text-content">
+                      <p class="font14">
+                        양면 디자인으로 정보를 넉넉하게 담을 수 있어 만족도가 높았습니다. 라운드
+                        모서리와 코팅 처리 덕분에 고급스러운 인상이 강하게 남아요. 당일 신청은 안
+                        했지만, 기다릴 만한 퀄리티였습니다.
+                      </p>
+                    </div>
+                    <p class="font14 resName">
+                      2025.08.21
+                      <span>김*원</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- 푸터 -->
+    <footer id="footer"></footer>
+  </body>
+</html>
