@@ -173,6 +173,6 @@ validateData(userInput, hasNumber, '숫자');
 validateData(userEmail, hasKorean, '한글');
 validateData(userEmailDomain, hasNumber, '숫자');
 validateData(userEmailDomain, hasKorean, '한글');
-valiDatePhone(userPhone1, 3, '첫번째 전화번호를 정확히 입력해주세요.');
+valiDatePhone(userPhone1, 2, '첫번째 전화번호를 정확히 입력해주세요.');
 valiDatePhone(userPhone2, 3, '두번째 전화번호를 정확히 입력해주세요.');
 valiDatePhone(userPhone3, 3, '세번째 전화번호를 정확히 입력해주세요.');
